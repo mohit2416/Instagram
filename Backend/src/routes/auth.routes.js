@@ -8,6 +8,6 @@ authRouter.post("/register", authController.registerController)
 
 authRouter.post("/login", authController.loginController)
 
-module.exports = authRouter
 
-// const { default: mongoose } = require("mongoose")
+
+module.exports = authRouter
