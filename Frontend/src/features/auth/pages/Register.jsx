@@ -13,16 +13,7 @@ const Register = () => {
     async function handelSubmit(e) {
         e.preventDefault()
 
-        axios.post("http://localhost:3000/api/auth/register", {
-            username,
-            email,
-            password
-        },{
-            withCredentials: true
-        })
-            .then(res => {
-                console.log(res.data)
-            })
+        
     }
 
     return (
@@ -34,16 +25,19 @@ const Register = () => {
                         onInput={(e) => { setUsername(e.target.value) }}
                         type="text"
                         name='username'
+                        id='username'
                         placeholder='Enter username' />
                     <input
                         onInput={(e) => { setEmail(e.target.value) }}
                         type="text"
                         name='email'
+                        id='email'
                         placeholder='Enter email' />
                     <input
                         onInput={(e) => { setPassword(e.target.value) }}
                         type="password"
                         name='password'
+                        id='password'
                         placeholder='Enter password' />
                     <button type='submit'>Register</button>
                 </form>
